@@ -1,0 +1,49 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(185, 41%, 84%) ;  
+}
+
+h2{
+    text-align: center;
+}
+
+.main-container{
+    max-width: 1440px;
+    margin: 0 auto ; 
+    width: 100%;
+}
+
+.container-tip{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: hsl(189, 41%, 97%);
+}
+
+.container-percent, 
+.container-result{
+    width: 50%;
+}
+
+.container-percent{
+    background: hsl(189, 41%, 97%);
+}
+
+.container-result{
+    background:  hsl(183, 100%, 15%);
+}
