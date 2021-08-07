@@ -1,3 +1,14 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%); 
+   /* Neutral */
+    --very-dark-cyan: hsl(183, 100%, 15%);  
+    --dark-grayish-cyan: hsl(186, 14%, 43%) ; 
+    --dark-grayish-cyan: hsl(184, 14%, 56%) ; 
+    --light-grayish-cyan: hsl(185, 41%, 84%) ; 
+    --light-cyan: hsl(189, 41%, 97%) ; 
+}
+
+
 html, body {
   box-sizing: border-box;
   margin: 0;
@@ -14,25 +25,40 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: hsl(185, 41%, 84%) ;  
+    background: var(--light-grayish-cyan) ;  
+    font-family: 'Space Mono', monospace;
 }
 
 h2{
     text-align: center;
 }
 
+input{
+    font-size: 24px;
+    outline: none;
+    border: none;
+}
+input:focus{
+    outline: none ; 
+    border: 2px solid var(--strong-cyan);
+    border-radius: 3px;   
+}
+
+label{
+    display: inline-block;
+}
+
 .main-container{
     max-width: 1440px;
     margin: 0 auto ; 
-    width: 100%;
+    width: 90%;
 }
 
 .container-tip{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px;
-    background: hsl(189, 41%, 97%);
+    background: white;
 }
 
 .container-percent, 
@@ -41,9 +67,69 @@ h2{
 }
 
 .container-percent{
-    background: hsl(189, 41%, 97%);
+    background: white;
+    padding: 45px;
+}
+.container-percent label{
+    color: var(--dark-grayish-cyan);
+    font-weight: bold;
+    margin-bottom: 10px; 
 }
 
-.container-result{
-    background:  hsl(183, 100%, 15%);
+
+.tip input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: var(--light-cyan);
+    text-align: right;
+    color: var(--very-dark-cyan);
+    font-weight: bold;
+
+}
+
+.select-tip{
+    margin-top: 20px;
+}
+
+.button-select-tip{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(30%, 1fr) );
+    grid-gap: 15px;
+}
+
+.button-select-tip input{
+    height: 40px;
+    padding: 0;
+    border: none; 
+    border-radius: 5px;
+    background: var(--very-dark-cyan);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#button-custom{
+    background: white;
+    color: var(--dark-grayish-cyan);
+    background: var(--light-cyan);
+}
+
+.button-select-tip input:hover{
+    background: hsl(173, 61%, 77% , 1);
+    color: var(--very-dark-cyan);
+}
+
+.number-people {
+    margin-top: 20px;
+    position: relative ; 
+}
+
+#label-zero{
+    position: absolute;
+    right: 0;
+    color: #c67e72;
 }
