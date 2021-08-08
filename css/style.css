@@ -29,8 +29,12 @@ body{
     font-family: 'Space Mono', monospace;
 }
 
-h2{
+h1{
     text-align: center;
+    color: transparent;
+    background: url(../images/logo.svg) no-repeat center;
+    height: auto;
+    min-height: 100px;
 }
 
 input{
@@ -59,6 +63,8 @@ label{
     display: flex;
     justify-content: space-between;
     background: white;
+    padding: 30px 35px;
+    border-radius: 15px;
 }
 
 .container-percent, 
@@ -68,12 +74,26 @@ label{
 
 .container-percent{
     background: white;
-    padding: 45px;
+    padding-right: 30px;
 }
 .container-percent label{
     color: var(--dark-grayish-cyan);
     font-weight: bold;
     margin-bottom: 10px; 
+}
+
+.container-input{
+    position: relative;
+}
+.container-input::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    left: 20px;
+    top: 10px;
+    background: url(../images/icon-dollar.svg) no-repeat ;
 }
 
 
@@ -100,7 +120,7 @@ label{
     grid-gap: 15px;
 }
 
-.button-select-tip input{
+.button-select-tip button{
     height: 40px;
     padding: 0;
     border: none; 
@@ -118,18 +138,94 @@ label{
     background: var(--light-cyan);
 }
 
-.button-select-tip input:hover{
+.button-select-tip button:hover{
     background: hsl(173, 61%, 77% , 1);
     color: var(--very-dark-cyan);
 }
 
 .number-people {
     margin-top: 20px;
-    position: relative ; 
+    position: relative;
 }
+
+.number-people  .container-input::before{
+    background: url(../images/icon-person.svg) no-repeat;
+}
+
+
 
 #label-zero{
     position: absolute;
     right: 0;
     color: #c67e72;
+}
+
+.container-result{
+    background: var(--very-dark-cyan);
+    padding: 45px;
+    border-radius: 15px;
+}
+
+.container-result label{
+    color: white;
+    font-weight: 700;
+    display: block;
+}
+
+.container-result  span{
+    color: var(--light-grayish-cyan);
+}
+
+.tip-amount{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.results-tip{
+    font-size: 35px;
+    
+}
+
+.results-tip span{
+    color: var(--strong-cyan);
+    font-weight: bold;
+}
+
+.button-reset{
+    width: 100%;
+    border: none;
+    height: 45px;
+    border-radius: 5px;
+    background: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media(max-width: 850px){
+    body{
+        height: 100%;
+    }
+    h1{
+        margin: 30px 0 0 0;
+    }
+    .main-container{
+        width: 100%;
+    }
+    .container-tip{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-percent{
+        padding-right: 0;
+        width: 100%;
+    }
+    .container-result{
+        width: 100%;
+        margin-top: 30px;
+        padding: 45px 20px;
+    }
 }

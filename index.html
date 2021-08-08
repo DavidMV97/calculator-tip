@@ -6,53 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
     <title>Calculator tip</title>
 </head>
 <body>
     <div class="main-container">
-        <h2>SPLITTER</h2>
+        <h1> SPLITER </h1>
         <div class="container-tip">
             <div class="container-percent">
-                <div class="percent-inpu tip">
+                <div class="percent-input tip">
                     <label for="Bill"> Bill </label>
-                    <input type="number" name="" id="">
+                    <div class="container-input" >
+                        <input type="number" name="" id="value-bill" value="0" >
+                    </div>
                 </div>
                 <div class="select-tip">
                     <label for=""> Select Tip % </label>
                     <div class="button-select-tip">
-                        <input type="button" value="5%">
-                        <input type="button" value="10%">
-                        <input type="button" value="15%">
-                        <input type="button" value="20%">
-                        <input type="button" value="50%">
-                        <input type="button" value="Custom" id="button-custom" >
+                        <button value="5" class="button-tip"> 5% </button>
+                        <button value="10" class="button-tip"> 10% </button>
+                        <button value="15" class="button-tip"> 15% </button>
+                        <button value="20" class="button-tip"> 20% </button>
+                        <button value="50" class="button-tip"> 50% </button>
+                        <button value="" class="button-tip" id="button-custom" > CUSTOM </button>
+                    
                     </div>
                 </div>
                 <div class="number-people tip">
                     <label for="">Number of People</label>
                     <label for="" id="label-zero" > Cant't be zero </label>
-                    <input type="number" name="" id="">
+                    <div class="container-input">
+                        <input type="number"  id="number-people" value="0" >
+                    </div>
                 </div>
             </div>
             <div class="container-result">
                 <div class="tip-amount">
                     <div class="amount-labels">
-                        <label for=""> tip amount </label>
+                        <label for=""> Tip Amount </label>
                         <span> / person </span>
                     </div>
                     <div class="results-tip">
-                        <span> $ 0.00 </span>
+                        <span id="results-tip-value"> $0.00 </span>
                     </div>
                 </div>
                 <div class="tip-amount">
                     <div class="amount-labels">
-                        <label for=""> tip amount </label>
+                        <label for=""> Total </label>
                         <span> / person </span>
                     </div>
                     <div class="results-tip">
-                        <span> $ 0.00 </span>
+                        <span id="results-total"> $0.00 </span>
                     </div>
                 </div>
+                <button class="button-reset" > RESET </button>
             </div>
         </div>
     </div>
