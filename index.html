@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <script src="js/main.js"></script>
     <title>Calculator tip</title>
 </head>
+
 <body>
     <div class="main-container">
         <h1> SPLITER </h1>
@@ -16,8 +18,8 @@
             <div class="container-percent">
                 <div class="percent-input tip">
                     <label for="Bill"> Bill </label>
-                    <div class="container-input" >
-                        <input type="number" name="" id="value-bill" value="0" >
+                    <div class="container-input">
+                        <input type="number" name="" id="value-bill" value="0" min="0">
                     </div>
                 </div>
                 <div class="select-tip">
@@ -28,15 +30,15 @@
                         <button value="15" class="button-tip"> 15% </button>
                         <button value="20" class="button-tip"> 20% </button>
                         <button value="50" class="button-tip"> 50% </button>
-                        <button value="" class="button-tip" id="button-custom" > CUSTOM </button>
-                    
+                        <button value="" class="button-tip" id="button-custom"> CUSTOM </button>
+
                     </div>
                 </div>
                 <div class="number-people tip">
                     <label for="">Number of People</label>
-                    <label for="" id="label-zero" > Cant't be zero </label>
+                    <label for="" id="label-zero"> Cant't be zero </label>
                     <div class="container-input">
-                        <input type="number"  id="number-people" value="0" >
+                        <input type="number" id="number-people" value="0" min="0">
                     </div>
                 </div>
             </div>
@@ -59,11 +61,12 @@
                         <span id="results-total"> $0.00 </span>
                     </div>
                 </div>
-                <button class="button-reset" > RESET </button>
+                <button class="button-reset"> RESET </button>
             </div>
         </div>
     </div>
 
 
 </body>
+
 </html>
